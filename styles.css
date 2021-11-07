@@ -1,0 +1,82 @@
+body {
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+p{
+  color: red;
+}
+
+#title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin:  5%;
+  color: Red;
+}
+
+#title:hover{
+  color: #ff8243;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.simon{
+  animation: color-change 6s infinite;
+}
+
+@keyframes color-change{
+  0% { color: red; }
+25% { color: blue; }
+50% { color: yellow; }
+75% { color: green; }
+100% { color: red; }
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.greeting{
+  color: red;
+  margin-top: 1rem;
+}
+
+.heart{
+  color: red;
+}
