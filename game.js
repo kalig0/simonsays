@@ -1,4 +1,4 @@
-const buttonColours = ["red", "blue", "green", "yellow"];
+const buttonColors = ["red", "blue", "green", "yellow"];
 
 let gamePattern = [];
 let userClickedPattern = [];
@@ -18,11 +18,11 @@ $("#title").click(function() {
 
 $(".btn").click(function() {
 
-  let userChosenColour = $(this).attr("id");
-  userClickedPattern.push(userChosenColour);
+  let userChosenColor = $(this).attr("id");
+  userClickedPattern.push(userChosenColor);
 
-  playSound(userChosenColour);
-  animatePress(userChosenColour);
+  playSound(userChosenColor);
+  animatePress(userChosenColor);
 
   checkAnswer(userClickedPattern.length - 1);
 });
@@ -59,18 +59,18 @@ function nextSequence() {
   $("#title").text("Current Level: " + level +" <---> Highest Level: " + highScore);
 
   var randomNumber;
-  var randomChosenColour;
+  var randomChosenColor;
   for (let i = 0; i < level; i++) {
     randomNumber = Math.floor(Math.random() * 4);
-    randomChosenColour = buttonColours[randomNumber];
+    randomChosenColor = buttonColors[randomNumber];
 
-    gamePattern.push(randomChosenColour);
+    gamePattern.push(randomChosenColor);
 
   };
-  gamePattern.forEach((colour, index)=>{
+  gamePattern.forEach((Color, index)=>{
     setTimeout(function() {
-        $("#" + colour).fadeIn(100).fadeOut(100).fadeIn(100);
-        playSound(colour);
+        $("#" + Color).fadeIn(100).fadeOut(100).fadeIn(100);
+        playSound(Color);
       },
       1000*(index+1))
   })
